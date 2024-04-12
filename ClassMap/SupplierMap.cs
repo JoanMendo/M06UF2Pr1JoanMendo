@@ -13,10 +13,11 @@ public class SupplierMap : ClassMap<Supplier>
         Map(x => x.ZipCode).Column("zipcode");
         Map(x => x.Area).Column("area");
         Map(x => x.Phone).Column("phone");
-        Map(x => x.ProductNo).Column("productno");
+        References(x => x.Product).Column("product").Not.LazyLoad();
         Map(x => x.Amount).Column("amount");
         Map(x => x.Credit).Column("credit");
         Map(x => x.Remark).Column("remark");
+        
 
     }
 }

@@ -1,4 +1,5 @@
-﻿public class Product
+﻿namespace Classes;
+public class Product
 {
     public virtual int Id { get; set; }
     
@@ -13,4 +14,8 @@
     public virtual int Price { get; set; }
 
     public virtual int EmpNo { get; set; }
+
+    public virtual Employee Employee { get; set; }
+
+    public virtual Supplier Supplier { get; set; }
 }

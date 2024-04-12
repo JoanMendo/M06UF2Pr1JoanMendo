@@ -11,4 +11,6 @@ public class Employee
     public virtual int Commission { get; set; }
 
     public virtual int DepartmentNo { get; set; }
+
+    public virtual IList<Order> Orders { get; set; }
 }

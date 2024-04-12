@@ -11,6 +11,7 @@ public class ProductMap: ClassMap<Product>
         Map(x => x.CurrentStock).Column("currentstock");
         Map(x => x.MinStock).Column("minstock");
         Map(x => x.Price).Column("price");
-        Map(x => x.EmpNo).Column("empno");
+        References(x => x.Employee).Column("empno").Not.LazyLoad();
+        HasOne(x => x.Supplier).PropertyRef(nameof(Supplier.Product)).Not.LazyLoad().Cascade.All();
     }
 }

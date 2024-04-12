@@ -14,5 +14,6 @@ public class EmployeeMap : ClassMap<Employee>
         Map(x => x.Salary).Column("salary");
         Map(x => x.Commission).Column("commission");
         Map(x => x.DepartmentNo).Column("deptno");
+        HasMany(x => x.Orders).KeyColumn("employeeno").Not.LazyLoad().Cascade.AllDeleteOrphan();
     }
 }

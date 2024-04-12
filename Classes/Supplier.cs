@@ -17,12 +17,14 @@ public class Supplier
 
     public virtual string Phone { get; set; }
 
-    public virtual int ProductNo { get; set; }
+    public virtual Product Product { get; set; }
 
     public virtual int Amount { get; set; }
 
     public virtual int Credit { get; set; }
 
     public virtual string Remark { get; set; }
+
+   
 
 }
